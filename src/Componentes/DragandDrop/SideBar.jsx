@@ -20,7 +20,7 @@ export default () => {
       <div className="description">
     
       </div>
-      <div className="dndnode input" onDragStart={(event) => onDragStart(event, 'input')} draggable>
+      <div className="dndnode input" onDragStart={(event) => onDragStart(event, '✉️ Message ')} draggable>
        ✉️ Message 
       </div>
       {/* <div className="dndnode" onDragStart={(event) => onDragStart(event, 'default')} draggable>
