@@ -78,6 +78,9 @@ const SaveRestore = () => {
       onConnect={onConnect}
       onInit={setRfInstance}
     >
+        <div className="dndnode input" onDragStart={(event) => onDragStart(event, 'input')} draggable>
+       ✉️ Message 
+      </div>
       <Panel position="top-right">
         <button onClick={onSave}>Save Changes</button>
         <button onClick={onAdd}>add node</button>
