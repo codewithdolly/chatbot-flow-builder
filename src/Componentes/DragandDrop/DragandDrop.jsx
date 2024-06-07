@@ -12,32 +12,29 @@ import "reactflow/dist/style.css";
 import Sidebar from "./SideBar";
 
 import "./DragandDrop.css";
+import SendMessage from "./SendMessage";
 
 const initialNodes = [
   {
-    id: "1",
-    type: "input",
-    data: { label: "Test Message 1" },
-    position: { x: 150, y: 5 },
+    id: '1',
+    type: 'sendMessage', // Custom node type
+    data: { label: 'Test Message 1' },
+    position: { x: 100, y: 50 },
   },
   {
-    id: "2",
-    // type: 'input',
-    data: { label: "Test Message 2" },
-    position: { x: 250, y: 80 },
+    id: '2',
+    type: 'sendMessage', // Custom node type
+    data: { label: 'Test Message 2' },
+    position: { x: 300, y: 0 },
   },
-  {
-    id: "3",
-    // type: 'input',
-    data: { label: "Test Message 3" },
-    position: { x: 300, y: 200 },
-  },
+
 ];
 
 const initialEdeges = [
   { id: "1-2", source: "1", target: "2" },
-  { id: "2-3", source: "2", target: "3", animated: "true" },
+  { id: "2-3", source: "2", target: "3" },
 ];
+
 
 let id = 0;
 const getId = () => `dndnode_${id++}`;
@@ -99,9 +96,11 @@ const DnDFlow = () => {
             onInit={setReactFlowInstance}
             onDrop={onDrop}
             onDragOver={onDragOver}
+            nodeTypes={{ sendMessage: SendMessage }} // Register custom node type
             fitView
+            
           >
-            <Background />
+            {/* <Background /> */}
             <Controls />
           </ReactFlow>
         </div>
