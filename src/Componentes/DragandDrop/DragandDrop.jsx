@@ -16,25 +16,23 @@ import SendMessage from "./SendMessage";
 
 const initialNodes = [
   {
-    id: '1',
-    type: 'sendMessage', // Custom node type
-    data: { label: 'Test Message 1' },
+    id: "1",
+    type: "sendMessage", // Custom node type
+    data: { label: "Test Message 1" },
     position: { x: 100, y: 50 },
   },
   {
-    id: '2',
-    type: 'sendMessage', // Custom node type
-    data: { label: 'Test Message 2' },
+    id: "2",
+    type: "sendMessage", // Custom node type
+    data: { label: "Test Message 2" },
     position: { x: 300, y: 0 },
   },
-
 ];
 
 const initialEdeges = [
   { id: "1-2", source: "1", target: "2" },
   { id: "2-3", source: "2", target: "3" },
 ];
-
 
 let id = 0;
 const getId = () => `dndnode_${id++}`;
@@ -46,8 +44,7 @@ const DnDFlow = () => {
   const [reactFlowInstance, setReactFlowInstance] = useState(null);
 
   const onConnect = useCallback(
-    (params) => 
-      setEdges((eds) => addEdge(params, eds)),
+    (params) => setEdges((eds) => addEdge(params, eds)),
     []
   );
 
@@ -98,7 +95,6 @@ const DnDFlow = () => {
             onDragOver={onDragOver}
             nodeTypes={{ sendMessage: SendMessage }} // Register custom node type
             fitView
-            
           >
             {/* <Background /> */}
             <Controls />
