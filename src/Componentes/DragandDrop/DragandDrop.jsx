@@ -27,11 +27,24 @@ const initialNodes = [
     data: { label: "Test Message 2" },
     position: { x: 300, y: 0 },
   },
+  {
+    id: "3",
+    type: "sendMessage", // Custom node type
+    data: { label: "Test Message 3" },
+    position: { x: 550, y: -20 },
+  },
+  {
+    id: "4",
+    type: "sendMessage", // Custom node type
+    data: { label: "Test Message 4" },
+    position: { x: 800, y: 10 },
+  },
 ];
 
 const initialEdeges = [
   { id: "1-2", source: "1", target: "2" },
   { id: "2-3", source: "2", target: "3" },
+  { id: "3-4", source: "3", target: "4", animated: "true" },
 ];
 
 let id = 0;
