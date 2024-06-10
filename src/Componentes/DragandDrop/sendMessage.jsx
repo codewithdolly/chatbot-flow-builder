@@ -6,7 +6,7 @@ export default function ShowMessage({ data }) {
 
   return (
     <>
-      <div className="border" style={{ width: "10rem" }}>
+      <div className="border bg-white" style={{ width: "10rem" }}>
         <p className="bg-info px-1">Send Message</p>
         <p className="px-1">
           <small>{label}</small>

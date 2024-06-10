@@ -8,9 +8,7 @@ import ReactFlow, {
   Background,
 } from "reactflow";
 import "reactflow/dist/style.css";
-
 import Sidebar from "./SideBar";
-
 import "./DragandDrop.css";
 import SendMessage from "./SendMessage";
 
@@ -109,7 +107,7 @@ const DnDFlow = () => {
             nodeTypes={{ sendMessage: SendMessage }} // Register custom node type
             fitView
           >
-            {/* <Background /> */}
+            <Background />
             <Controls />
           </ReactFlow>
         </div>
