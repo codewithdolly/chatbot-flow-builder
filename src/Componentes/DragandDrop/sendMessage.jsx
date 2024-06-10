@@ -1,7 +1,7 @@
 import React from "react";
 import { Handle, Position } from "reactflow";
 
-export default function ShowMessage({ data }) {
+export default function SendMessage({ data }) {
   const { label } = data;
 
   return (
