@@ -10,7 +10,7 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 import Sidebar from "./SideBar";
 import "./DragandDrop.css";
-import SendMessage from "./SendMessage";
+import SendMessage from "./SendMessage/SendMessage";
 
 const initialNodes = [
   {
